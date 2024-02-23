@@ -3,7 +3,8 @@
 }
 
 body {
-    margin-top: 0px;
+    margin: 0px;
+    font-family: "Merriweather", serif;
 }
 
 header {
@@ -17,14 +18,55 @@ h1 {
     color: #fff;
     text-transform: uppercase;
     font-size: 1.2rem;
+    font-weight: 700;
 }
-legend {
-    font-size: 1.5em;
-    font-weight: bold;
+
+h2 {
+    text-align: center;
+    color: #2c3945;
+    margin-block-end: .5em;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+p {
+    text-align: center;
+    color: #b2b7bb;
+    margin-block-start: 0;
+    font-size: .9rem;
+}
+
+footer > p {
+    font-style: italic;
+}
+
+form {
+    margin: 30px 10px;
 }
 
 fieldset {
     display: flex;
     flex-direction: column;
+    margin: 20px 5px;
+    padding: 0;
     border: none;
+}
+
+fieldset + fieldset {
+    border-top: 2px solid #2c3945;
+}
+
+legend {
+    color: #2c3945;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+label {
+    color: #7f8d9b;
+}
+
+input, select {
+    background-color: #eff0f1;
+    border: non;
 }
