@@ -14,6 +14,10 @@ header {
     padding: 1rem;
 }
 
+footer {
+    margin-bottom: 150px;
+}
+
 h1 {
     color: #fff;
     text-transform: uppercase;
@@ -35,6 +39,11 @@ p {
     margin-block-start: 0;
     font-size: .9rem;
 }
+ 
+form > p {
+    padding-bottom: 30px;
+    border-bottom: 10px double #2c3945;
+}
 
 footer > p {
     font-style: italic;
@@ -45,28 +54,108 @@ form {
 }
 
 fieldset {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 5px;
+    margin: 30px 5px;
     padding: 0;
     border: none;
 }
 
-fieldset + fieldset {
-    border-top: 2px solid #2c3945;
+fieldset:first-of-type {
+    border-bottom: 3px solid #2c3945;
 }
 
 legend {
+    margin-bottom: 30px;
     color: #2c3945;
     font-size: 1.2em;
     font-weight: bold;
 }
 
 label {
+    margin-bottom: 20px;
     color: #7f8d9b;
+    font-size: .9rem;
+}
+
+input, select, textarea {
+    padding: 18px;
+    background-color: #eff0f1;
+    border: none;
+    border-radius: 5px;
+}
+
+:focus-visible {
+    outline-color: #47698b;
 }
 
 input, select {
-    background-color: #eff0f1;
-    border: non;
+    margin-bottom: 20px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[placeholder] {
+    font-family: "Merriweather", serif;
+    font-style: italic;
+    text-align: right;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin-right: 10px;
+}
+
+button[type=submit] {
+    width: 100%; /* Add this line */
+    padding: 20px;
+    background-color: #4dbbb5;
+    color: #fff;
+    font-family: "Merriweather", serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#zip {
+    width: 50%;
+}
+
+.form-group, .news-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.last-item {
+    margin-bottom: 10px;
+}
+
+#topics {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .form-group {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .form-group label {
+        width: 20%;
+    }
+
+    .form-group input, .form-group select {
+        width: 80%;
+    }
+
+    #zip {
+        width: 25%;
+    }
 }
